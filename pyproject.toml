@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "pythinder"
+version = "0.1.0"
+description = ""
+authors = ["Alynne Fereira <alynneferreiras@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Kivy = "^2.1.0"
+kivymd = {git = "https://github.com/kivymd/KivyMd.git", rev = "master"}
+Cython = "0.29.19"
+setuptools = "^62.1.0"
+
+[tool.poetry.dev-dependencies]
+buildozer = "^1.3.0"
+watchdog = "^2.1.6"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
