@@ -1,19 +1,47 @@
-MDBoxLayout:
-    orientation: 'vertical'
-
+MDScreen:
     MDToolbar:
-        title: 'Pythinder'
-        right_action_items: [['menu']]
+        id: toolbar
+        title: "Pythinder"
+        elevation: 10
+        pos_hint: {"top": 1}
+    MDSwiper:
+        id: swiper
+        size_hint_y: None
+        height: root.height - toolbar.height - dp(80)
+        y: root.height - self.height - toolbar.height - dp(20)
 
-    #MDLabel:
-    #    text: 'Olar'
-    #    font_style: 'H1'
-    #    halign: 'center'
-    MDScreen:
-        MDSwiper:
+        MDSwiperItem:
+            FitImage:
+                size_hint_y: 1
+                size_hint_x: 0.75
+                source: "img/octo1.jpg"
+                radius: [20,]
 
-            MDSwiperItem:
-
-            MDSwiperItem:
-
-            MDSwiperItem:
+        MDSwiperItem:
+            FitImage:
+                size_hint_y: 1
+                size_hint_x: 0.75
+                source: "img/octo2.jpg"
+                radius: [20,]
+        MDSwiperItem:
+            FitImage:
+                size_hint_y: 1
+                size_hint_x: 0.75
+                source: "img/octo3.jpg"
+                radius: [20,]
+    BoxLayout:
+        orientation: 'horizontal'
+        #center: root.center
+        MDFloatingActionButton:
+            #pos_hint: {"center_x": 1, "center_y": .1}
+            icon: "arrow-left-bold"
+            md_bg_color: app.theme_cls.primary_color
+            on_release: if swiper.get_current_index() > 0 :swiper.set_current(swiper.get_current_index()-1)
+        MDFloatingActionButton:
+            #pos_hint: {"center_x": 1, "center_y": .1}
+            icon: "heart"
+            md_bg_color: app.theme_cls.primary_color
+        MDFloatingActionButton:
+            #pos_hint: {"center_x": 1, "center_y": .1}
+            icon: "arrow-right-bold"
+            md_bg_color: app.theme_cls.primary_color

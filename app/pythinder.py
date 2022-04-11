@@ -1,5 +1,11 @@
+from kivy.lang import Builder
 from kivymd.app import MDApp
-from kivy.lang.builder import Builder
 
-class Pomodoro(MDFloatLayout):
-    timer_string = StringProperty('25:00')
+
+class Pythinder(MDApp):
+    def build(self):
+        self.theme_cls.theme_style = "Light"
+        self.theme_cls.primary_palette = "Green"
+        return Builder.load_file('pythinder.kv')
+
+Pythinder().run()
