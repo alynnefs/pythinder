@@ -9,7 +9,6 @@ MDScreen:
         size_hint_y: None
         height: root.height - toolbar.height - dp(80)
         y: root.height - self.height - toolbar.height - dp(20)
-
         MDSwiperItem:
             FitImage:
                 size_hint_y: 1
@@ -29,19 +28,22 @@ MDScreen:
                 size_hint_x: 0.75
                 source: "img/octo3.jpg"
                 radius: [20,]
+
     BoxLayout:
         orientation: 'horizontal'
-        #center: root.center
+        padding: root.width/2-100, 0, 0, 0
+        spacing: 10
+        #MDFloatingActionButton:
+        #    icon: "arrow-left-bold"
+        #    md_bg_color: app.theme_cls.primary_color
+        #    on_release: if swiper.get_current_index() > 0 :swiper.set_current(swiper.get_current_index()-1)
         MDFloatingActionButton:
-            #pos_hint: {"center_x": 1, "center_y": .1}
-            icon: "arrow-left-bold"
+            icon: "close"
             md_bg_color: app.theme_cls.primary_color
-            on_release: if swiper.get_current_index() > 0 :swiper.set_current(swiper.get_current_index()-1)
         MDFloatingActionButton:
-            #pos_hint: {"center_x": 1, "center_y": .1}
             icon: "heart"
             md_bg_color: app.theme_cls.primary_color
-        MDFloatingActionButton:
-            #pos_hint: {"center_x": 1, "center_y": .1}
-            icon: "arrow-right-bold"
-            md_bg_color: app.theme_cls.primary_color
+        #MDFloatingActionButton:
+        #    icon: "arrow-right-bold"
+        #    md_bg_color: app.theme_cls.primary_color
+        #    on_release: if swiper.get_current_index() < 2 :swiper.set_current(swiper.get_current_index()+1)
