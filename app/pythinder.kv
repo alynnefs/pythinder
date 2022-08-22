@@ -4,6 +4,7 @@ MDScreen:
         title: "Pythinder"
         elevation: 10
         pos_hint: {"top": 1}
+        md_bg_color: app.theme_cls.primary_color
     MDSwiper:
         id: swiper
         size_hint_y: None
@@ -31,19 +32,13 @@ MDScreen:
 
     BoxLayout:
         orientation: 'horizontal'
-        padding: root.width/2-100, 0, 0, 0
+        padding: root.width/2-50, 0, 0, 10
         spacing: 10
-        #MDFloatingActionButton:
-        #    icon: "arrow-left-bold"
-        #    md_bg_color: app.theme_cls.primary_color
-        #    on_release: if swiper.get_current_index() > 0 :swiper.set_current(swiper.get_current_index()-1)
         MDFloatingActionButton:
             icon: "close"
-            md_bg_color: app.theme_cls.primary_color
+            md_bg_color: "#FFD43B"
+            icon_color: "#306998"
         MDFloatingActionButton:
             icon: "heart"
-            md_bg_color: app.theme_cls.primary_color
-        #MDFloatingActionButton:
-        #    icon: "arrow-right-bold"
-        #    md_bg_color: app.theme_cls.primary_color
-        #    on_release: if swiper.get_current_index() < 2 :swiper.set_current(swiper.get_current_index()+1)
+            md_bg_color: "#FFD43B"
+            icon_color: "#306998"
