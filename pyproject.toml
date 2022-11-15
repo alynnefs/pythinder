@@ -10,7 +10,6 @@ Kivy = "^2.1.0"
 kivymd = {git = "https://github.com/kivymd/KivyMd.git", rev = "master"}
 Cython = "0.29.19"
 setuptools = "^65.5.1"
-pillow = "8.4.0"
 
 [tool.poetry.dev-dependencies]
 buildozer = "^1.3.0"
