@@ -1,15 +1,9 @@
 MDScreen:
-    MDToolbar:
-        id: toolbar
-        title: "Pythinder"
-        elevation: 10
-        pos_hint: {"top": 1}
-        md_bg_color: app.theme_cls.primary_color
     MDSwiper:
         id: swiper
         size_hint_y: None
-        height: root.height - toolbar.height - dp(80)
-        y: root.height - self.height - toolbar.height - dp(20)
+        height: root.height - dp(80)
+        y: root.height - self.height - dp(20)
         MDSwiperItem:
             FitImage:
                 size_hint_y: 1
@@ -29,16 +23,18 @@ MDScreen:
                 size_hint_x: 0.75
                 source: "img/octo3.jpg"
                 radius: [20,]
-
-    BoxLayout:
+    MDBoxLayout:
+        adaptive_height: True
         orientation: 'horizontal'
-        padding: root.width/2-50, 0, 0, 10
+        padding: root.width/2-130, 0, 0, 20
         spacing: 10
-        MDFloatingActionButton:
+        MDIconButton:
             icon: "close"
+            theme_text_color: "Custom"
             md_bg_color: "#FFD43B"
             icon_color: "#306998"
-        MDFloatingActionButton:
+        MDIconButton:
             icon: "heart"
+            theme_text_color: "Custom"
             md_bg_color: "#FFD43B"
             icon_color: "#306998"
