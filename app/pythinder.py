@@ -8,4 +8,3 @@ class Pythinder(MDApp):
         self.theme_cls.primary_palette = "Blue"
         return Builder.load_file('app/pythinder.kv')
 
-# Pythinder().run()
